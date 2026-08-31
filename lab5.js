@@ -1,8 +1,10 @@
 import * as THREE from
 'https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js';
 
+// Scene
 const scene = new THREE.Scene();
 
+// Camera
 const camera =
     new THREE.PerspectiveCamera(
         75,
@@ -11,6 +13,7 @@ const camera =
         1000
     );
 
+// Renderer
 const renderer =
     new THREE.WebGLRenderer({
         antialias: true
@@ -25,10 +28,7 @@ document.body.appendChild(
     renderer.domElement
 );
 
-//////////////////////////////////////////////////
 // Cube
-//////////////////////////////////////////////////
-
 const geometry =
     new THREE.BoxGeometry();
 
@@ -45,24 +45,7 @@ const cube =
 
 scene.add(cube);
 
-//////////////////////////////////////////////////
-// Ambient Light
-//////////////////////////////////////////////////
-
-const ambientLight =
-    new THREE.AmbientLight(
-        0xffffff,
-        0.2
-    );
-
-scene.add(
-    ambientLight
-);
-
-//////////////////////////////////////////////////
-// Directional Light
-//////////////////////////////////////////////////
-
+// Single Directional Light
 const directionalLight =
     new THREE.DirectionalLight(
         0xffffff,
@@ -79,12 +62,10 @@ scene.add(
     directionalLight
 );
 
+// Camera Position
 camera.position.z = 3;
 
-//////////////////////////////////////////////////
-// Animation
-//////////////////////////////////////////////////
-
+// Animation Loop
 function animate()
 {
     requestAnimationFrame(
@@ -94,44 +75,6 @@ function animate()
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
 
-    let t =
-        Date.now() * 0.001;
-
-    //////////////////////////////////////////
-    // Moving Light
-    //////////////////////////////////////////
-
-    directionalLight.position.x =
-        Math.cos(t);
-
-    directionalLight.position.z =
-        Math.sin(t);
-
-    //////////////////////////////////////////
-    // Animated Color
-    //////////////////////////////////////////
-
-    let r =
-        Math.abs(
-            Math.sin(t)
-        );
-
-    let g =
-        Math.abs(
-            Math.sin(t * 1.3)
-        );
-
-    let b =
-        Math.abs(
-            Math.sin(t * 1.7)
-        );
-
-    directionalLight.color.setRGB(
-        r,
-        g,
-        b
-    );
-
     renderer.render(
         scene,
         camera
@@ -140,10 +83,7 @@ function animate()
 
 animate();
 
-//////////////////////////////////////////////////
-// Resize Support
-//////////////////////////////////////////////////
-
+// Resize Handling
 window.addEventListener(
     "resize",
     () =>
