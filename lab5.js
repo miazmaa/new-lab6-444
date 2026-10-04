@@ -63,12 +63,18 @@ scene.add(
 );
 
 // point light
-const pointLight =
-new THREE.PointLight(0xffffff,2);
+const pointLight = new THREE.PointLight(0xffffff,2);
 scene.add(pointLight);
 pointLight.position.set(1, 1, 1);
 const pointLightHelper = new THREE.PointLightHelper(pointLight, 0.2);
 scene.add(pointLightHelper);
+
+//second point light
+const newPointLight = new THREE.PointLight(0x008000,2);
+scene.add(newPointLight);
+newPointLight.position.set(1, -1, 1);
+const newPointLightHelper = new THREE.PointLightHelper(newPointLight, 0.2);
+scene.add(newPointLightHelper);
 
 // Camera Position
 camera.position.z = 3;
