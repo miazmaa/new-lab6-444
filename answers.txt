@@ -1,0 +1,42 @@
+1.	Ambient light illuminates all objects equally regardless of direction.
+2.	Light gets brighter/whiter, as when I changed the ambient lighting intensity to 1.0, the entire cube became white
+3.	1.0
+4.	No
+5.	Only the face pointing towards the light
+6.	The faces not hit by the light became darker
+7.	Certain faces become darker or brighter if they’re hitting the light
+8.	0 1 0 brightened the most faces
+9.	Red
+10.	Yellow
+11.	The light isn’t pointing at those faces
+12.	Blue or green
+13.	I think red or yellow since they stick out the most
+14.	The light remains fixed while the cube moves
+15.	They move to face the light
+16.	Brighter when it faces light and darker when it turns away
+17.	It can create a dramatic atmosphere or improve realism depending on the lighting you use
+18.	0xff00ff
+19.	No, it colored more faces than I expected at once
+20.	Implemented a clock to keep track of time and then changed the hex color every second
+21.	I think they all looked well; it just depended on the hex color I chose. I liked purple and aqua the most
+22.	Yellow’s faces were sometimes hard to see
+23.	Point lights illuminate light from a single point and don’t hit objects uniformly, it depends on proximity to the point light.
+24.	Point lights are more like lightbulbs
+25.	Directional lights are more like sunlight
+26.	The face it hits grows paler and the light hits more parts of the cube
+27.	Less light hits the cube
+28.	Green dominated over the white light
+29.	One light is more noticeable than the other, but I think this could have to do with the colors I chose
+30.	Yes I think the lighting appears realistic
+
+Reflection Questions:
+1.	Ambient light is much like sunlight where it illuminates all objects it touches evenly.
+2.	Directional light is more focused and concentrated light on a specific point without hitting everything evenly.
+3.	Point lighting comes from one specific source and illuminates objects differently depending on direction and closeness to the light source.
+4.	To decide how the light looks on the surface of the material 
+5.	If they’re facing the point light or if they turn away/are blocked from the light source by other faces
+6.	It changed brightness and visibility of the cube
+7.	Mood changes with light color and object visibility depending on the intended emotions by the artist.
+8.	Threejs has simpler commands to set up objects and light than WebGL, with convenient features to change light color, track time, etc
+9.	I found point lights the most useful and interesting during the lab
+10.	How to incorporate light into Threejs projects and a little more about the utility of point lights in a scene
